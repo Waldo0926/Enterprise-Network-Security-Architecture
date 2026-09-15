@@ -1,0 +1,21 @@
+Architecture validation passed
+OK corp-lan: 10.20.0.0/23 (510 usable IPv4 hosts)
+OK corp-wifi: 10.20.2.0/23 (510 usable IPv4 hosts)
+OK guest: 10.20.4.0/24 (254 usable IPv4 hosts)
+OK iot-print: 10.20.5.0/25 (126 usable IPv4 hosts)
+OK management: 10.20.5.128/26 (62 usable IPv4 hosts)
+OK dmz: 10.20.5.192/26 (62 usable IPv4 hosts)
+OK infrastructure: 10.20.6.0/25 (126 usable IPv4 hosts)
+OK vpn-pool: 10.20.6.128/25 (126 usable IPv4 hosts)
+OK isolated network: production-ot 10.30.0.0/24
+OK FW-001: internet -> dmz allow
+OK FW-002: internet -> dmz allow
+OK FW-003: corp-lan -> iot-print allow
+OK FW-004: corp-wifi -> infrastructure allow
+OK FW-005: corp-lan -> infrastructure allow
+OK FW-006: corp-wifi -> infrastructure allow
+OK FW-007: management -> internal allow
+OK FW-008: vpn-pool -> corp-lan allow
+OK FW-009: guest -> internal deny
+OK FW-010: internal -> production-ot deny
+OK FW-011: production-ot -> internal deny
