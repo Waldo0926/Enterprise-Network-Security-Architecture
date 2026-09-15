@@ -1,0 +1,17 @@
+{
+  "organisation": "ExampleCo Sales & Marketing",
+  "base_network": "10.20.0.0/21",
+  "segments": [
+    {"name": "corp-lan", "vlan": 10, "subnet": "10.20.0.0/23", "gateway": "10.20.0.1", "purpose": "Managed workstations and laptops"},
+    {"name": "corp-wifi", "vlan": 20, "subnet": "10.20.2.0/23", "gateway": "10.20.2.1", "purpose": "802.1X enterprise wireless clients"},
+    {"name": "guest", "vlan": 30, "subnet": "10.20.4.0/24", "gateway": "10.20.4.1", "purpose": "Internet-only guest wireless"},
+    {"name": "iot-print", "vlan": 40, "subnet": "10.20.5.0/25", "gateway": "10.20.5.1", "purpose": "Printers, scanners and constrained IoT"},
+    {"name": "management", "vlan": 50, "subnet": "10.20.5.128/26", "gateway": "10.20.5.129", "purpose": "Jump host and infrastructure management"},
+    {"name": "dmz", "vlan": 60, "subnet": "10.20.5.192/26", "gateway": "10.20.5.193", "purpose": "Internet-facing web, mail, DNS and VPN services"},
+    {"name": "infrastructure", "vlan": 70, "subnet": "10.20.6.0/25", "gateway": "10.20.6.1", "purpose": "Directory, RADIUS, DNS forwarder and logging"},
+    {"name": "vpn-pool", "vlan": null, "subnet": "10.20.6.128/25", "gateway": "10.20.6.129", "purpose": "Remote-access VPN client pool"}
+  ],
+  "isolated_networks": [
+    {"name": "production-ot", "subnet": "10.30.0.0/24", "routed_to_corporate": false, "purpose": "Example isolated operational-technology environment"}
+  ]
+}

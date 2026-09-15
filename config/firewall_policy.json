@@ -1,0 +1,16 @@
+{
+  "default_action": "deny",
+  "rules": [
+    {"id": "FW-001", "source": "internet", "destination": "dmz", "protocol": "tcp", "ports": [443], "action": "allow", "purpose": "Public HTTPS"},
+    {"id": "FW-002", "source": "internet", "destination": "dmz", "protocol": "tcp", "ports": [25, 587], "action": "allow", "purpose": "SMTP and authenticated submission"},
+    {"id": "FW-003", "source": "corp-lan", "destination": "iot-print", "protocol": "tcp", "ports": [631, 9100], "action": "allow", "purpose": "Printing only"},
+    {"id": "FW-004", "source": "corp-wifi", "destination": "infrastructure", "protocol": "udp", "ports": [1812, 1813], "action": "allow", "purpose": "802.1X / RADIUS"},
+    {"id": "FW-005", "source": "corp-lan", "destination": "infrastructure", "protocol": "udp", "ports": [53, 123], "action": "allow", "purpose": "DNS and NTP"},
+    {"id": "FW-006", "source": "corp-wifi", "destination": "infrastructure", "protocol": "udp", "ports": [53, 123], "action": "allow", "purpose": "DNS and NTP"},
+    {"id": "FW-007", "source": "management", "destination": "internal", "protocol": "tcp", "ports": [22, 443, 3389], "action": "allow", "purpose": "Administration from jump-host segment"},
+    {"id": "FW-008", "source": "vpn-pool", "destination": "corp-lan", "protocol": "tcp", "ports": [443], "action": "allow", "purpose": "Remote access to approved internal web applications"},
+    {"id": "FW-009", "source": "guest", "destination": "internal", "protocol": "any", "ports": [], "action": "deny", "purpose": "Guest isolation"},
+    {"id": "FW-010", "source": "internal", "destination": "production-ot", "protocol": "any", "ports": [], "action": "deny", "purpose": "Prevent corporate-to-OT lateral movement"},
+    {"id": "FW-011", "source": "production-ot", "destination": "internal", "protocol": "any", "ports": [], "action": "deny", "purpose": "Prevent OT-to-corporate lateral movement"}
+  ]
+}
