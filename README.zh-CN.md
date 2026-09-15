@@ -1,5 +1,10 @@
 # 企业网络安全架构
 
+[![类型](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E8%AF%BE%E7%A8%8B%E4%BD%9C%E4%B8%9A-2563eb?style=for-the-badge)](#)
+[![技术](https://img.shields.io/badge/%E6%8A%80%E6%9C%AF-Python-7c3aed?style=for-the-badge)](#)
+[![许可证](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-16a34a?style=for-the-badge)](LICENSE)
+
+
 [English](README.md)
 
 这是一个完全虚构的企业网络安全设计，并将关键设计转化为 **architecture-as-code**：规范的 CIDR/VLAN 规划、默认拒绝防火墙策略、网络分段、DMZ、远程访问、企业 Wi-Fi、明确的 OT 信任边界，以及自动化验证和威胁模型文档。
