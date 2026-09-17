@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-16a34a?style=for-the-badge)](LICENSE)
 
 
-[简体中文](README.zh-CN.md)
+**English** · [中文](README.zh-CN.md)
 
 A fictional enterprise network-security design expressed as **architecture-as-code**: CIDR-safe VLAN planning, a default-deny firewall policy, segmentation, DMZ design, remote access, enterprise Wi-Fi, an explicit OT trust boundary, automated validation, and threat-model documentation.
 
